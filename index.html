@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="user-scalable=no">
+	<link rel="stylesheet" href="style.css">
+	<title>Sudoku</title>
+</head>
+<body>
+	<div id="page-container">
+		<h1 id="game-title">SUDOKU</h1>
+
+		<div class="screen-container" id="login-screen">
+			<h1>Sign Into Existing Account</h1>
+			<br>
+			<div>
+				<input type="text" id="textbox-login-user" placeholder="Username" minlength="4">
+				<input type="password" id="textbox-login-password" placeholder="Password" minlength="4">
+			</div>
+			<p id="login-error-message">Error Message</p>
+			<button type="submit" class="control-button" id="button-login-submit">Sign In</button>
+			<p>Don't have an account? <a id="link-register" href="#">Create one now!</a></p>
+		</div>
+
+		<div class="screen-container" id="register-screen">
+			<h1>Create New Account</h1>
+			<br>
+			<div>
+				<input type="text" id="textbox-register-user" placeholder="Username" minlength="4">
+				<input type="password" id="textbox-register-password" placeholder="Password" minlength="4">
+			</div>
+			<p id="register-error-message">Error Message</p>
+			<button type="submit" class="control-button" id="button-register-submit">Create Account</button>
+			<p>Already have an account? <a id="link-login" href="#">Sign in now!</a></p>
+		</div>
+
+		<div class="screen-container" id="difficulty-screen">
+			<h1>Hello, <span id="username-heading">user</span>!</h1>
+			<br>
+			<p>Choose game difficulty</p>
+			<div class="button-container">
+				<button class="control-button difficulty-button" value="cake">Cake</button>
+				<button class="control-button difficulty-button" value="easy">Easy</button>
+				<button class="control-button difficulty-button" value="medium">Medium</button>
+				<button class="control-button difficulty-button" value="hard">Hard</button>
+				<button class="control-button difficulty-button" value="insane">Insane</button>
+			</div>
+			<br>
+			<button class="control-button" id="button-logout">Sign out</button>
+		</div>
+
+		<div class="screen-container" id="board-screen">
+			<div id="board-container"></div>
+
+			<div class="button-container">
+				<button class="control-button" id="button-check">Check</button>
+				<button class="control-button" id="button-clear-board">Clear Board</button>
+				<button class="control-button" id="button-new-game">New Game</button>
+				<button class="control-button" id="button-change-difficulty">Change Difficulty</button>
+			</div>
+
+			<div id="game-input-container">
+				<div class="button-container" id="number-button-container"></div>
+
+				<div class="button-container">
+					<button class="control-button" id="button-input-clear" value="0">Clear</button>
+					<button class="control-button" id="button-input-close">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="prompt-container">
+		<div id="prompt-window">
+			<h1 id="prompt-message">Message</h1>
+
+			<div class="button-container" id="prompt-game-win-button-container">
+				<button class="control-button" id="button-prompt-new-game">Start New Game</button>
+				<button class="control-button" id="button-prompt-change-difficulty">Change Difficulty</button>
+			</div>
+
+			<div id="prompt-confirm-button-container">
+				<button class="control-button" id="button-prompt-confirm">OK</button>
+			</div>
+
+			<div class="button-container" id="prompt-dialog-button-container">
+				<button class="control-button" id="button-prompt-dialog-yes">Yes</button>
+				<button class="control-button" id="button-prompt-dialog-no">No</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="utility.js"></script>
+<script src="userinterface.js"></script>
+<script src="users.js"></script>
+<script src="gamelogic.js"></script>
+<script src="main.js"></script>
